@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "error": {
+    "code": "SIRET_NOT_FOUND",
+    "message_fr": "Aucune entreprise trouvée pour ce numéro SIRET. Vérifiez la saisie ou renseignez vos informations manuellement.",
+    "retryable": false
+  }
+}

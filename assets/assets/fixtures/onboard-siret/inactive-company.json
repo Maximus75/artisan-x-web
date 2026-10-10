@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "data": {
+    "siret": "34985729300022",
+    "siren": "349857293",
+    "name": "ANCIENNE PLOMBERIE ANA",
+    "legal_form": "SARL",
+    "naf_code": "43.22A",
+    "naf_label": "Travaux d'installation d'eau et de gaz en tous locaux",
+    "address": {
+      "line1": "5 AVENUE DU CHANTIER",
+      "postal_code": "69003",
+      "city": "LYON",
+      "country": "FR"
+    },
+    "vat_number": "FR34349857293",
+    "active": false,
+    "closure_date": "2024-02-28",
+    "creation_date": "2010-09-01"
+  }
+}

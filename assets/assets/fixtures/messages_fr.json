@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "purpose": "Central code -> French message map for every reserved Edge Function error code. Consumed by FlutterFlow (FF-02 callEdge / ErrorRetry) via the mirrored map embedded in ff/custom_actions/call_edge.dart. THIS FILE IS THE CANONICAL SOURCE; the Dart map must mirror it. CI (fixtures/validate.ts) fails if any reserved code is missing or malformed.",
+    "shape": "codes[CODE] = { message_fr: string (professional, vous form), retryable: boolean }",
+    "note": "Messages are the future locale surface (add pl/pt/ro/tr maps later, same keys). retryable drives the ErrorRetry retry button. PLAN_LIMIT drives the upgrade sheet.",
+    "source": "These 19 codes are the CANONICAL reserved set for the project (confirmed by the founder 2026-07-29). Established from the blueprint's documented error surfaces (S7 functions, S8 AI, S9 security, S10 errors, S11 links). Add new codes here first (and mirror them in ff/custom_actions/call_edge.dart); CI enforces completeness."
+  },
+  "codes": {
+    "VALIDATION_FAILED": {
+      "message_fr": "Certaines informations sont invalides ou incomplètes. Veuillez vérifier votre saisie.",
+      "retryable": false
+    },
+    "UNAUTHENTICATED": {
+      "message_fr": "Votre session a expiré. Veuillez vous reconnecter.",
+      "retryable": false
+    },
+    "FORBIDDEN": {
+      "message_fr": "Vous n'avez pas les droits nécessaires pour effectuer cette action.",
+      "retryable": false
+    },
+    "NOT_FOUND": {
+      "message_fr": "L'élément demandé est introuvable.",
+      "retryable": false
+    },
+    "CONFLICT": {
+      "message_fr": "Cette action n'est plus possible dans l'état actuel du document. Veuillez rafraîchir la page.",
+      "retryable": false
+    },
+    "IDEMPOTENCY_CONFLICT": {
+      "message_fr": "Cette opération a déjà été traitée. Veuillez rafraîchir la page avant de réessayer.",
+      "retryable": false
+    },
+    "PLAN_LIMIT": {
+      "message_fr": "Vous avez atteint la limite de votre forfait. Passez à un forfait supérieur pour continuer.",
+      "retryable": false
+    },
+    "RATE_LIMITED": {
+      "message_fr": "Vous avez effectué trop de demandes. Veuillez patienter quelques instants puis réessayer.",
+      "retryable": true
+    },
+    "SIRET_NOT_FOUND": {
+      "message_fr": "Aucune entreprise trouvée pour ce numéro SIRET. Vérifiez la saisie ou renseignez vos informations manuellement.",
+      "retryable": false
+    },
+    "AI_PARSE_FAILED": {
+      "message_fr": "L'assistant n'a pas pu interpréter votre saisie. Votre texte est conservé ; réessayez ou saisissez les lignes manuellement.",
+      "retryable": true
+    },
+    "AI_UNAVAILABLE": {
+      "message_fr": "L'assistant vocal est momentanément indisponible. Vous pouvez réessayer ou saisir vos lignes manuellement.",
+      "retryable": true
+    },
+    "UPSTREAM_UNAVAILABLE": {
+      "message_fr": "Le service est momentanément indisponible. Veuillez réessayer dans un instant.",
+      "retryable": true
+    },
+    "PAYMENT_FAILED": {
+      "message_fr": "Le paiement n'a pas pu être finalisé. Aucun montant n'a été débité. Veuillez réessayer.",
+      "retryable": true
+    },
+    "CONNECT_INCOMPLETE": {
+      "message_fr": "Votre compte de paiement n'est pas encore finalisé. Terminez la configuration pour encaisser des paiements.",
+      "retryable": false
+    },
+    "LINK_EXPIRED": {
+      "message_fr": "Ce lien a expiré ou n'est plus valide.",
+      "retryable": false
+    },
+    "FACTURX_FAILED": {
+      "message_fr": "La facture électronique (Factur-X) n'a pas pu être générée. Le document PDF reste valable ; une nouvelle tentative sera effectuée automatiquement.",
+      "retryable": true
+    },
+    "SERVER_ERROR": {
+      "message_fr": "Une erreur technique est survenue de notre côté. Veuillez réessayer dans un instant.",
+      "retryable": true
+    },
+    "MALFORMED_RESPONSE": {
+      "message_fr": "Une réponse inattendue a été reçue. Veuillez réessayer ; si le problème persiste, contactez le support.",
+      "retryable": true
+    },
+    "UNKNOWN": {
+      "message_fr": "Une erreur inattendue est survenue. Veuillez réessayer.",
+      "retryable": true
+    }
+  }
+}

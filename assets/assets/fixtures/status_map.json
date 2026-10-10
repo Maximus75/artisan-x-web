@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "purpose": "Document-facing status -> { label_fr, color } map for the StatusChip component. Flat keys because the doc-facing status strings do not collide in meaning (draft/issued/paid/... share one colour wherever they appear).",
+    "shape": "statuses[STATUS] = { label_fr: string, color: '#RRGGBB', tone: grey|blue|green|amber|red }",
+    "scope": "Covers the statuses a tradesperson sees on document/payment/project screens: quote_status, invoice_status, payment_status, facturx_status, project_status. Infrastructure-only statuses (subscriptions, connect, members) are out of StatusChip scope.",
+    "tones": {
+      "grey": "#6B7280 — neutral / inactive (draft, cancelled, closed, pending)",
+      "blue": "#2563EB — in progress (issued, initiated, generated)",
+      "green": "#16A34A — success / positive (accepted, paid, succeeded, validated, active)",
+      "amber": "#D97706 — attention (expired, partially_paid)",
+      "red": "#DC2626 — failure / negative (declined, failed)"
+    }
+  },
+  "statuses": {
+    "draft":           { "label_fr": "Brouillon",             "color": "#6B7280", "tone": "grey"  },
+    "issued":          { "label_fr": "Émis",                  "color": "#2563EB", "tone": "blue"  },
+    "accepted":        { "label_fr": "Accepté",               "color": "#16A34A", "tone": "green" },
+    "declined":        { "label_fr": "Refusé",                "color": "#DC2626", "tone": "red"   },
+    "expired":         { "label_fr": "Expiré",                "color": "#D97706", "tone": "amber" },
+    "partially_paid":  { "label_fr": "Partiellement payé",    "color": "#D97706", "tone": "amber" },
+    "paid":            { "label_fr": "Payé",                  "color": "#16A34A", "tone": "green" },
+    "cancelled":       { "label_fr": "Annulé",                "color": "#6B7280", "tone": "grey"  },
+    "initiated":       { "label_fr": "Paiement initié",       "color": "#2563EB", "tone": "blue"  },
+    "succeeded":       { "label_fr": "Paiement reçu",         "color": "#16A34A", "tone": "green" },
+    "failed":          { "label_fr": "Échec",                 "color": "#DC2626", "tone": "red"   },
+    "pending":         { "label_fr": "En attente",            "color": "#6B7280", "tone": "grey"  },
+    "generated":       { "label_fr": "Généré",                "color": "#2563EB", "tone": "blue"  },
+    "validated":       { "label_fr": "Validé",                "color": "#16A34A", "tone": "green" },
+    "active":          { "label_fr": "Actif",                 "color": "#16A34A", "tone": "green" },
+    "closed":          { "label_fr": "Clôturé",               "color": "#6B7280", "tone": "grey"  },
+    "archived":        { "label_fr": "Archivé",               "color": "#6B7280", "tone": "grey"  }
+  }
+}
